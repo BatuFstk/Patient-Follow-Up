@@ -1,6 +1,6 @@
 ﻿namespace Patient_Follow_Up
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Tckimliktextbox = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Sifretextbox = new Guna.UI.WinForms.GunaTextBox();
             this.LoginButton = new Guna.UI.WinForms.GunaButton();
             this.BacktoregisterButton = new Guna.UI.WinForms.GunaButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,15 @@
             this.panel1.Size = new System.Drawing.Size(949, 111);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 111);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -62,15 +72,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "HASTA BASINÇ TAKİP OTOMASYONU";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 111);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Tckimliktextbox
             // 
@@ -176,12 +177,23 @@
             this.BacktoregisterButton.Text = "KAYIT EKRANINA GERİ DÖN";
             this.BacktoregisterButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(424, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 24);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "GİRİŞ EKRANI";
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(949, 594);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BacktoregisterButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.Sifretextbox);
@@ -190,7 +202,8 @@
             this.Controls.Add(this.Tckimliktextbox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -211,6 +224,7 @@
         private Guna.UI.WinForms.GunaTextBox Sifretextbox;
         private Guna.UI.WinForms.GunaButton LoginButton;
         private Guna.UI.WinForms.GunaButton BacktoregisterButton;
+        private System.Windows.Forms.Label label4;
     }
 }
 
