@@ -35,6 +35,12 @@ namespace Patient_Follow_Up.Forms
         private void Registerbutton_Click(object sender, EventArgs e)
         {
             var db = FirestoreHelper.Database;
+            if (!CheckIfUserAlreadyExist())
+            {
+
+                MessageBox.Show("Bu Kimlik Numarasına Sahip Bir Kullanıcı Bulunmaktadır!");
+                return;
+            }
             var data = GetWriteData();
             DocumentReference docRef = db.Collection("UserData").Document(data.Username);
             docRef.SetAsync(data);
@@ -43,9 +49,9 @@ namespace Patient_Follow_Up.Forms
 
         private UserData GetWriteData()
         {
-
+            
             string username = Kayıttckimliktext.Text.Trim();
-            string password = Kayıtsifretext.Text;
+            string password =  Security.Encrypt(Kayıtsifretext.Text);
 
             return new UserData()
             {
@@ -71,6 +77,7 @@ namespace Patient_Follow_Up.Forms
             }
             else
             {
+                
                 return false;
             }
 
