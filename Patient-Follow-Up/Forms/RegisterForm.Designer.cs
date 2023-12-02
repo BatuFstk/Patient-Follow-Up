@@ -50,7 +50,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 111);
+            this.panel1.Size = new System.Drawing.Size(922, 123);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -58,7 +58,7 @@
             this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 

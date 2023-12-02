@@ -50,6 +50,10 @@ namespace Patient_Follow_Up
                 {
 
                     MessageBox.Show("Giriş Başarılı!");
+                    Hide();
+                    Anasayfa form = new Anasayfa();
+                    form.ShowDialog();
+                    Close();
 
                 }
                 else
