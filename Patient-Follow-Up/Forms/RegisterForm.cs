@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Google.Cloud.Firestore;
+using Patient_Follow_Up.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,15 +34,45 @@ namespace Patient_Follow_Up.Forms
 
         private void Registerbutton_Click(object sender, EventArgs e)
         {
-
+            var db = FirestoreHelper.Database;
+            var data = GetWriteData();
+            DocumentReference docRef = db.Collection("UserData").Document(data.Username);
+            docRef.SetAsync(data);
+            MessageBox.Show("Hesap oluşturuldu!");
         }
 
-        private void GetWriteData()
+        private UserData GetWriteData()
         {
 
             string username = Kayıttckimliktext.Text.Trim();
-            string password = Kayıtsifretext.Text.Trim();
+            string password = Kayıtsifretext.Text;
 
+            return new UserData()
+            {
+                Username = username,
+                Password = password
+
+            };
+
+        }
+        private bool CheckIfUserAlreadyExist()
+        {
+            string username = Kayıttckimliktext.Text.Trim();
+           
+
+            var db = FirestoreHelper.Database;
+            DocumentReference docRef = db.Collection("UserData").Document(username);
+            UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+
+            if(data != null)
+            {
+                return true; 
+
+            }
+            else
+            {
+                return false;
+            }
 
         }
     }

@@ -151,6 +151,7 @@
             this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "GİRİŞ";
             this.LoginButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // BacktoregisterButton
             // 
@@ -165,16 +166,16 @@
             this.BacktoregisterButton.ForeColor = System.Drawing.Color.Black;
             this.BacktoregisterButton.Image = null;
             this.BacktoregisterButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.BacktoregisterButton.Location = new System.Drawing.Point(221, 381);
+            this.BacktoregisterButton.Location = new System.Drawing.Point(217, 381);
             this.BacktoregisterButton.Name = "BacktoregisterButton";
             this.BacktoregisterButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.BacktoregisterButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BacktoregisterButton.OnHoverForeColor = System.Drawing.Color.White;
             this.BacktoregisterButton.OnHoverImage = null;
             this.BacktoregisterButton.OnPressedColor = System.Drawing.Color.Black;
-            this.BacktoregisterButton.Size = new System.Drawing.Size(274, 42);
+            this.BacktoregisterButton.Size = new System.Drawing.Size(278, 42);
             this.BacktoregisterButton.TabIndex = 6;
-            this.BacktoregisterButton.Text = "KAYIT EKRANINA GERİ DÖN";
+            this.BacktoregisterButton.Text = "HESAP OLUŞTURUN";
             this.BacktoregisterButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BacktoregisterButton.Click += new System.EventHandler(this.BacktoregisterButton_Click);
             // 
@@ -182,13 +183,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(424, 146);
+            this.label4.Location = new System.Drawing.Point(423, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "GİRİŞ EKRANI";
             // 
-            // Login
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,7 +204,7 @@
             this.Controls.Add(this.Tckimliktextbox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
