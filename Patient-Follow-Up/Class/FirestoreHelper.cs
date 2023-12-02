@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Google.Cloud.Firestore;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Patient_Follow_Up.Class
 {
@@ -25,6 +29,20 @@ namespace Patient_Follow_Up.Class
 ";
 
         static string filepath = "";
+        public static FirestoreDb Database;
+
+        public static void SetEnvironmentVariable()
+        {
+
+            filepath = Path.Combine(Path.GetTempPath(), Path.GetFileNameWithoutExtension(Path.GetRandomFileName())) + ".json";
+            File.WriteAllText(filepath, fireconfig);
+            File.SetAttributes(filepath, FileAttributes.Hidden);
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", filepath);
+            Database = FirestoreDb.Create("patient-followup-5a2b9");
+            File.Delete(filepath);
+
+
+        }
 
 
 

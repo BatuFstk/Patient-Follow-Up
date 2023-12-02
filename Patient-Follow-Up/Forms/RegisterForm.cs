@@ -29,5 +29,19 @@ namespace Patient_Follow_Up.Forms
             form.ShowDialog();
             Close();
         }
+
+        private void Registerbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GetWriteData()
+        {
+
+            string username = Kayıttckimliktext.Text.Trim();
+            string password = Kayıtsifretext.Text.Trim();
+
+
+        }
     }
 }

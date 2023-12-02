@@ -106,6 +106,7 @@
             this.Registerbutton.TabIndex = 13;
             this.Registerbutton.Text = "KAYIT";
             this.Registerbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Registerbutton.Click += new System.EventHandler(this.Registerbutton_Click);
             // 
             // Kayıtsifretext
             // 
