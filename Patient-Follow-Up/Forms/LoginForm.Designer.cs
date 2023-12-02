@@ -122,10 +122,11 @@
             this.Sifretextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Sifretextbox.Location = new System.Drawing.Point(338, 292);
             this.Sifretextbox.Name = "Sifretextbox";
-            this.Sifretextbox.PasswordChar = '\0';
+            this.Sifretextbox.PasswordChar = '●';
             this.Sifretextbox.SelectedText = "";
             this.Sifretextbox.Size = new System.Drawing.Size(358, 47);
             this.Sifretextbox.TabIndex = 4;
+            this.Sifretextbox.UseSystemPasswordChar = true;
             // 
             // LoginButton
             // 

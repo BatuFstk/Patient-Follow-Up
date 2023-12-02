@@ -35,7 +35,7 @@ namespace Patient_Follow_Up.Forms
         private void Registerbutton_Click(object sender, EventArgs e)
         {
             var db = FirestoreHelper.Database;
-            if (!CheckIfUserAlreadyExist())
+            if (CheckIfUserAlreadyExist())
             {
 
                 MessageBox.Show("Bu Kimlik Numarasına Sahip Bir Kullanıcı Bulunmaktadır!");

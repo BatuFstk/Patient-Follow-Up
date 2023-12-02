@@ -46,7 +46,7 @@ namespace Patient_Follow_Up
 
             if(data != null)
             {
-                if(password == data.Password)
+                if(password == Security.Decrypt(data.Password))
                 {
 
                     MessageBox.Show("Giriş Başarılı!");

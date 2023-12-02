@@ -120,10 +120,11 @@
             this.Kayıtsifretext.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Kayıtsifretext.Location = new System.Drawing.Point(312, 268);
             this.Kayıtsifretext.Name = "Kayıtsifretext";
-            this.Kayıtsifretext.PasswordChar = '\0';
+            this.Kayıtsifretext.PasswordChar = '●';
             this.Kayıtsifretext.SelectedText = "";
             this.Kayıtsifretext.Size = new System.Drawing.Size(358, 47);
             this.Kayıtsifretext.TabIndex = 12;
+            this.Kayıtsifretext.UseSystemPasswordChar = true;
             // 
             // label3
             // 
