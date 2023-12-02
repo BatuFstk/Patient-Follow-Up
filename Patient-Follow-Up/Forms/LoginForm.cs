@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Patient_Follow_Up.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +11,24 @@ using System.Windows.Forms;
 
 namespace Patient_Follow_Up
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void BacktoregisterButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            RegisterForm form = new RegisterForm();
+            form.ShowDialog();
+            Close();
 
         }
     }

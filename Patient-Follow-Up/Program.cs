@@ -16,7 +16,7 @@ namespace Patient_Follow_Up
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new LoginForm());
         }
     }
 }

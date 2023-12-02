@@ -1,6 +1,6 @@
 ﻿namespace Patient_Follow_Up
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -176,6 +176,7 @@
             this.BacktoregisterButton.TabIndex = 6;
             this.BacktoregisterButton.Text = "KAYIT EKRANINA GERİ DÖN";
             this.BacktoregisterButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BacktoregisterButton.Click += new System.EventHandler(this.BacktoregisterButton_Click);
             // 
             // label4
             // 
