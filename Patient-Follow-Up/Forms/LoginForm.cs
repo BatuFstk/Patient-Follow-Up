@@ -14,7 +14,7 @@ namespace Patient_Follow_Up
             InitializeComponent();
         }
 
-
+        // şifremi unuttum
         private void BacktoregisterButton_Click(object sender, EventArgs e)
         {
             Hide();
