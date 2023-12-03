@@ -56,8 +56,10 @@
             this.SilButton = new Guna.UI.WinForms.GunaButton();
             this.GüncelleButton = new Guna.UI.WinForms.GunaButton();
             this.BasıncDegerGetirButton = new Guna.UI.WinForms.GunaButton();
+            this.HastalariGoruntule = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastalariGoruntule)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +72,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1492, 123);
             this.panel1.TabIndex = 2;
-            
             // 
             // pictureBox1
             // 
@@ -219,7 +220,6 @@
             this.Hastatc.SelectedText = "";
             this.Hastatc.Size = new System.Drawing.Size(358, 35);
             this.Hastatc.TabIndex = 21;
-            
             // 
             // Hastaisim
             // 
@@ -533,12 +533,24 @@
             this.BasıncDegerGetirButton.Text = "BASINÇ DEĞERLERİNİ GETİR";
             this.BasıncDegerGetirButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // HastalariGoruntule
+            // 
+            this.HastalariGoruntule.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.HastalariGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HastalariGoruntule.Location = new System.Drawing.Point(675, 272);
+            this.HastalariGoruntule.Name = "HastalariGoruntule";
+            this.HastalariGoruntule.RowHeadersWidth = 51;
+            this.HastalariGoruntule.RowTemplate.Height = 24;
+            this.HastalariGoruntule.Size = new System.Drawing.Size(805, 530);
+            this.HastalariGoruntule.TabIndex = 35;
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1492, 968);
+            this.Controls.Add(this.HastalariGoruntule);
             this.Controls.Add(this.BasıncDegerGetirButton);
             this.Controls.Add(this.GüncelleButton);
             this.Controls.Add(this.SilButton);
@@ -568,10 +580,10 @@
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
-            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastalariGoruntule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +619,6 @@
         private Guna.UI.WinForms.GunaButton SilButton;
         private Guna.UI.WinForms.GunaButton GüncelleButton;
         private Guna.UI.WinForms.GunaButton BasıncDegerGetirButton;
+        private System.Windows.Forms.DataGridView HastalariGoruntule;
     }
 }

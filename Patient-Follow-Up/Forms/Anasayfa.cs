@@ -20,6 +20,23 @@ namespace Patient_Follow_Up.Forms
             this.loggedInUser = loggedInUser;
 
             // loggedInDoctorData'dan doktor bilgilerini kullanarak Firestore'a erişebilirsiniz
+
+            // DataGridView'e sütunları ekle
+            HastalariGoruntule.Columns.Add("Tc", "TC");
+            HastalariGoruntule.Columns.Add("Name", "İsim");
+            HastalariGoruntule.Columns.Add("Surname", "Soyisim");
+            HastalariGoruntule.Columns.Add("Birth", "Doğum Tarihi");
+            HastalariGoruntule.Columns.Add("Gender", "Cinsiyet");
+            HastalariGoruntule.Columns.Add("Barcode", "Barkod");
+            HastalariGoruntule.Columns.Add("EntryDate", "Giriş Tarihi");
+            HastalariGoruntule.Columns.Add("AcceptDate", "Onay Tarihi");
+            HastalariGoruntule.Columns.Add("ResultDate", "Sonuç Tarihi");
+
+            // Sütunların otomatik olarak oluşturulmasını önle
+            HastalariGoruntule.AutoGenerateColumns = false;
+
+            // DataGridView'in verileri güncelle
+            UpdateDataGridView();
         }
 
         private async void EkleButton_Click(object sender, EventArgs e)
@@ -47,21 +64,39 @@ namespace Patient_Follow_Up.Forms
                 .Collection("UserData").Document(loggedInUser.Username)
                 .Collection("Patients").Document();
 
-
-
-            // Firestore'a hasta verilerini ekle
-            
-
             try
             {
                 // Firestore'a hasta verilerini ekle
                 await patientRef.SetAsync(patientData);
 
                 MessageBox.Show("Hasta verisi eklendi.");
+
+                // Hasta eklendikten sonra DataGridView'i güncelle
+                UpdateDataGridView();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+        }
+
+        // Erişim belirleyicisi olarak public kullanın
+        public async void UpdateDataGridView()
+        {
+            // Firestore'dan hasta verilerini çek
+            var patientsQuery = await FirestoreHelper.Database
+                .Collection("UserData").Document(loggedInUser.Username)
+                .Collection("Patients").GetSnapshotAsync();
+
+            // DataGridView'i temizle
+            HastalariGoruntule.DataSource = null;
+            HastalariGoruntule.Rows.Clear();
+
+            // DataGridView'e yeni verileri ekle
+            foreach (var patientDocument in patientsQuery.Documents)
+            {
+                var patientData = patientDocument.ConvertTo<PatientData>();
+                HastalariGoruntule.Rows.Add(patientData.Tc, patientData.Name, patientData.Surname, patientData.Birth, patientData.Gender, patientData.Barcode, patientData.EntryDate, patientData.AcceptDate, patientData.ResultDate);
             }
         }
     }
