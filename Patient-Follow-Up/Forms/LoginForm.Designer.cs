@@ -74,6 +74,7 @@
             // 
             // Tckimliktextbox
             // 
+            this.Tckimliktextbox.BackColor = System.Drawing.Color.Transparent;
             this.Tckimliktextbox.BaseColor = System.Drawing.Color.White;
             this.Tckimliktextbox.BorderColor = System.Drawing.Color.CadetBlue;
             this.Tckimliktextbox.BorderSize = 3;
@@ -85,6 +86,7 @@
             this.Tckimliktextbox.Location = new System.Drawing.Point(338, 227);
             this.Tckimliktextbox.Name = "Tckimliktextbox";
             this.Tckimliktextbox.PasswordChar = '\0';
+            this.Tckimliktextbox.Radius = 10;
             this.Tckimliktextbox.SelectedText = "";
             this.Tckimliktextbox.Size = new System.Drawing.Size(358, 47);
             this.Tckimliktextbox.TabIndex = 1;
@@ -112,6 +114,7 @@
             // 
             // Sifretextbox
             // 
+            this.Sifretextbox.BackColor = System.Drawing.Color.Transparent;
             this.Sifretextbox.BaseColor = System.Drawing.Color.White;
             this.Sifretextbox.BorderColor = System.Drawing.Color.CadetBlue;
             this.Sifretextbox.BorderSize = 3;
@@ -123,6 +126,7 @@
             this.Sifretextbox.Location = new System.Drawing.Point(338, 292);
             this.Sifretextbox.Name = "Sifretextbox";
             this.Sifretextbox.PasswordChar = '●';
+            this.Sifretextbox.Radius = 10;
             this.Sifretextbox.SelectedText = "";
             this.Sifretextbox.Size = new System.Drawing.Size(358, 47);
             this.Sifretextbox.TabIndex = 4;
@@ -132,6 +136,7 @@
             // 
             this.LoginButton.AnimationHoverSpeed = 0.07F;
             this.LoginButton.AnimationSpeed = 0.03F;
+            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
             this.LoginButton.BaseColor = System.Drawing.Color.CadetBlue;
             this.LoginButton.BorderColor = System.Drawing.Color.Black;
             this.LoginButton.BorderSize = 2;
@@ -141,13 +146,14 @@
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
             this.LoginButton.Image = null;
             this.LoginButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.LoginButton.Location = new System.Drawing.Point(536, 381);
+            this.LoginButton.Location = new System.Drawing.Point(452, 376);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.LoginButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.LoginButton.OnHoverForeColor = System.Drawing.Color.White;
             this.LoginButton.OnHoverImage = null;
             this.LoginButton.OnPressedColor = System.Drawing.Color.Black;
+            this.LoginButton.Radius = 10;
             this.LoginButton.Size = new System.Drawing.Size(160, 42);
             this.LoginButton.TabIndex = 5;
             this.LoginButton.Text = "GİRİŞ";
@@ -158,6 +164,7 @@
             // 
             this.BacktoregisterButton.AnimationHoverSpeed = 0.07F;
             this.BacktoregisterButton.AnimationSpeed = 0.03F;
+            this.BacktoregisterButton.BackColor = System.Drawing.Color.Transparent;
             this.BacktoregisterButton.BaseColor = System.Drawing.Color.CadetBlue;
             this.BacktoregisterButton.BorderColor = System.Drawing.Color.Black;
             this.BacktoregisterButton.BorderSize = 2;
@@ -167,13 +174,14 @@
             this.BacktoregisterButton.ForeColor = System.Drawing.Color.Black;
             this.BacktoregisterButton.Image = null;
             this.BacktoregisterButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.BacktoregisterButton.Location = new System.Drawing.Point(217, 381);
+            this.BacktoregisterButton.Location = new System.Drawing.Point(389, 441);
             this.BacktoregisterButton.Name = "BacktoregisterButton";
             this.BacktoregisterButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.BacktoregisterButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BacktoregisterButton.OnHoverForeColor = System.Drawing.Color.White;
             this.BacktoregisterButton.OnHoverImage = null;
             this.BacktoregisterButton.OnPressedColor = System.Drawing.Color.Black;
+            this.BacktoregisterButton.Radius = 10;
             this.BacktoregisterButton.Size = new System.Drawing.Size(278, 42);
             this.BacktoregisterButton.TabIndex = 6;
             this.BacktoregisterButton.Text = "HESAP OLUŞTURUN";

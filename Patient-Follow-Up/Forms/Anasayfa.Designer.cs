@@ -198,6 +198,7 @@
             // 
             // Hastatc
             // 
+            this.Hastatc.BackColor = System.Drawing.Color.Transparent;
             this.Hastatc.BaseColor = System.Drawing.Color.White;
             this.Hastatc.BorderColor = System.Drawing.Color.CadetBlue;
             this.Hastatc.BorderSize = 3;
@@ -209,6 +210,7 @@
             this.Hastatc.Location = new System.Drawing.Point(226, 272);
             this.Hastatc.Name = "Hastatc";
             this.Hastatc.PasswordChar = '\0';
+            this.Hastatc.Radius = 10;
             this.Hastatc.SelectedText = "";
             this.Hastatc.Size = new System.Drawing.Size(358, 35);
             this.Hastatc.TabIndex = 21;
@@ -216,6 +218,7 @@
             // 
             // Hastaisim
             // 
+            this.Hastaisim.BackColor = System.Drawing.Color.Transparent;
             this.Hastaisim.BaseColor = System.Drawing.Color.White;
             this.Hastaisim.BorderColor = System.Drawing.Color.CadetBlue;
             this.Hastaisim.BorderSize = 3;
@@ -227,12 +230,14 @@
             this.Hastaisim.Location = new System.Drawing.Point(226, 319);
             this.Hastaisim.Name = "Hastaisim";
             this.Hastaisim.PasswordChar = '\0';
+            this.Hastaisim.Radius = 10;
             this.Hastaisim.SelectedText = "";
             this.Hastaisim.Size = new System.Drawing.Size(358, 35);
             this.Hastaisim.TabIndex = 22;
             // 
             // Hastasoyisim
             // 
+            this.Hastasoyisim.BackColor = System.Drawing.Color.Transparent;
             this.Hastasoyisim.BaseColor = System.Drawing.Color.White;
             this.Hastasoyisim.BorderColor = System.Drawing.Color.CadetBlue;
             this.Hastasoyisim.BorderSize = 3;
@@ -244,12 +249,14 @@
             this.Hastasoyisim.Location = new System.Drawing.Point(226, 367);
             this.Hastasoyisim.Name = "Hastasoyisim";
             this.Hastasoyisim.PasswordChar = '\0';
+            this.Hastasoyisim.Radius = 10;
             this.Hastasoyisim.SelectedText = "";
             this.Hastasoyisim.Size = new System.Drawing.Size(358, 35);
             this.Hastasoyisim.TabIndex = 23;
             // 
             // Hastabarkodno
             // 
+            this.Hastabarkodno.BackColor = System.Drawing.Color.Transparent;
             this.Hastabarkodno.BaseColor = System.Drawing.Color.White;
             this.Hastabarkodno.BorderColor = System.Drawing.Color.CadetBlue;
             this.Hastabarkodno.BorderSize = 3;
@@ -261,6 +268,7 @@
             this.Hastabarkodno.Location = new System.Drawing.Point(226, 520);
             this.Hastabarkodno.Name = "Hastabarkodno";
             this.Hastabarkodno.PasswordChar = '\0';
+            this.Hastabarkodno.Radius = 10;
             this.Hastabarkodno.SelectedText = "";
             this.Hastabarkodno.Size = new System.Drawing.Size(358, 35);
             this.Hastabarkodno.TabIndex = 24;
@@ -284,11 +292,13 @@
             this.CinsiyetCombobox.Name = "CinsiyetCombobox";
             this.CinsiyetCombobox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.CinsiyetCombobox.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CinsiyetCombobox.Radius = 10;
             this.CinsiyetCombobox.Size = new System.Drawing.Size(358, 33);
             this.CinsiyetCombobox.TabIndex = 25;
             // 
             // Hastadogumdatetime
             // 
+            this.Hastadogumdatetime.BackColor = System.Drawing.Color.Transparent;
             this.Hastadogumdatetime.BaseColor = System.Drawing.Color.White;
             this.Hastadogumdatetime.BorderColor = System.Drawing.Color.CadetBlue;
             this.Hastadogumdatetime.BorderSize = 3;
@@ -306,6 +316,7 @@
             this.Hastadogumdatetime.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Hastadogumdatetime.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Hastadogumdatetime.OnPressedColor = System.Drawing.Color.Black;
+            this.Hastadogumdatetime.Radius = 10;
             this.Hastadogumdatetime.Size = new System.Drawing.Size(358, 40);
             this.Hastadogumdatetime.TabIndex = 26;
             this.Hastadogumdatetime.Text = "3.12.2023";
@@ -313,6 +324,7 @@
             // 
             // hastagiristarihDatetime
             // 
+            this.hastagiristarihDatetime.BackColor = System.Drawing.Color.Transparent;
             this.hastagiristarihDatetime.BaseColor = System.Drawing.Color.White;
             this.hastagiristarihDatetime.BorderColor = System.Drawing.Color.CadetBlue;
             this.hastagiristarihDatetime.BorderSize = 3;
@@ -330,6 +342,7 @@
             this.hastagiristarihDatetime.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.hastagiristarihDatetime.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.hastagiristarihDatetime.OnPressedColor = System.Drawing.Color.Black;
+            this.hastagiristarihDatetime.Radius = 10;
             this.hastagiristarihDatetime.Size = new System.Drawing.Size(358, 40);
             this.hastagiristarihDatetime.TabIndex = 27;
             this.hastagiristarihDatetime.Text = "3.12.2023";
@@ -337,6 +350,7 @@
             // 
             // gunaDateTimePicker3
             // 
+            this.gunaDateTimePicker3.BackColor = System.Drawing.Color.Transparent;
             this.gunaDateTimePicker3.BaseColor = System.Drawing.Color.White;
             this.gunaDateTimePicker3.BorderColor = System.Drawing.Color.CadetBlue;
             this.gunaDateTimePicker3.BorderSize = 3;
@@ -354,6 +368,7 @@
             this.gunaDateTimePicker3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker3.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaDateTimePicker3.Radius = 10;
             this.gunaDateTimePicker3.Size = new System.Drawing.Size(358, 40);
             this.gunaDateTimePicker3.TabIndex = 28;
             this.gunaDateTimePicker3.Text = "3.12.2023";
@@ -361,6 +376,7 @@
             // 
             // hastasonuctarihidate
             // 
+            this.hastasonuctarihidate.BackColor = System.Drawing.Color.Transparent;
             this.hastasonuctarihidate.BaseColor = System.Drawing.Color.White;
             this.hastasonuctarihidate.BorderColor = System.Drawing.Color.CadetBlue;
             this.hastasonuctarihidate.BorderSize = 3;
@@ -378,6 +394,7 @@
             this.hastasonuctarihidate.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.hastasonuctarihidate.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.hastasonuctarihidate.OnPressedColor = System.Drawing.Color.Black;
+            this.hastasonuctarihidate.Radius = 10;
             this.hastasonuctarihidate.Size = new System.Drawing.Size(358, 41);
             this.hastasonuctarihidate.TabIndex = 29;
             this.hastasonuctarihidate.Text = "3.12.2023";
@@ -385,6 +402,7 @@
             // 
             // gunaTextBox1
             // 
+            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
             this.gunaTextBox1.BorderColor = System.Drawing.Color.CadetBlue;
             this.gunaTextBox1.BorderSize = 3;
@@ -396,6 +414,7 @@
             this.gunaTextBox1.Location = new System.Drawing.Point(226, 738);
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
+            this.gunaTextBox1.Radius = 10;
             this.gunaTextBox1.SelectedText = "";
             this.gunaTextBox1.Size = new System.Drawing.Size(358, 35);
             this.gunaTextBox1.TabIndex = 30;

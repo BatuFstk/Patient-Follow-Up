@@ -77,6 +77,7 @@
             // 
             this.Registerbutton.AnimationHoverSpeed = 0.07F;
             this.Registerbutton.AnimationSpeed = 0.03F;
+            this.Registerbutton.BackColor = System.Drawing.Color.Transparent;
             this.Registerbutton.BaseColor = System.Drawing.Color.CadetBlue;
             this.Registerbutton.BorderColor = System.Drawing.Color.Black;
             this.Registerbutton.BorderSize = 2;
@@ -86,13 +87,14 @@
             this.Registerbutton.ForeColor = System.Drawing.Color.Black;
             this.Registerbutton.Image = null;
             this.Registerbutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.Registerbutton.Location = new System.Drawing.Point(510, 357);
+            this.Registerbutton.Location = new System.Drawing.Point(419, 349);
             this.Registerbutton.Name = "Registerbutton";
             this.Registerbutton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Registerbutton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.Registerbutton.OnHoverForeColor = System.Drawing.Color.White;
             this.Registerbutton.OnHoverImage = null;
             this.Registerbutton.OnPressedColor = System.Drawing.Color.Black;
+            this.Registerbutton.Radius = 10;
             this.Registerbutton.Size = new System.Drawing.Size(160, 42);
             this.Registerbutton.TabIndex = 13;
             this.Registerbutton.Text = "KAYIT";
@@ -101,6 +103,7 @@
             // 
             // Kayıtsifretext
             // 
+            this.Kayıtsifretext.BackColor = System.Drawing.Color.Transparent;
             this.Kayıtsifretext.BaseColor = System.Drawing.Color.White;
             this.Kayıtsifretext.BorderColor = System.Drawing.Color.CadetBlue;
             this.Kayıtsifretext.BorderSize = 3;
@@ -112,6 +115,7 @@
             this.Kayıtsifretext.Location = new System.Drawing.Point(312, 268);
             this.Kayıtsifretext.Name = "Kayıtsifretext";
             this.Kayıtsifretext.PasswordChar = '●';
+            this.Kayıtsifretext.Radius = 10;
             this.Kayıtsifretext.SelectedText = "";
             this.Kayıtsifretext.Size = new System.Drawing.Size(358, 47);
             this.Kayıtsifretext.TabIndex = 12;
@@ -139,6 +143,7 @@
             // 
             // Kayıttckimliktext
             // 
+            this.Kayıttckimliktext.BackColor = System.Drawing.Color.Transparent;
             this.Kayıttckimliktext.BaseColor = System.Drawing.Color.White;
             this.Kayıttckimliktext.BorderColor = System.Drawing.Color.CadetBlue;
             this.Kayıttckimliktext.BorderSize = 3;
@@ -150,6 +155,7 @@
             this.Kayıttckimliktext.Location = new System.Drawing.Point(312, 203);
             this.Kayıttckimliktext.Name = "Kayıttckimliktext";
             this.Kayıttckimliktext.PasswordChar = '\0';
+            this.Kayıttckimliktext.Radius = 10;
             this.Kayıttckimliktext.SelectedText = "";
             this.Kayıttckimliktext.Size = new System.Drawing.Size(358, 47);
             this.Kayıttckimliktext.TabIndex = 9;
@@ -159,6 +165,7 @@
             // 
             this.backtologinbutton.AnimationHoverSpeed = 0.07F;
             this.backtologinbutton.AnimationSpeed = 0.03F;
+            this.backtologinbutton.BackColor = System.Drawing.Color.Transparent;
             this.backtologinbutton.BaseColor = System.Drawing.Color.CadetBlue;
             this.backtologinbutton.BorderColor = System.Drawing.Color.Black;
             this.backtologinbutton.BorderSize = 2;
@@ -168,13 +175,14 @@
             this.backtologinbutton.ForeColor = System.Drawing.Color.Black;
             this.backtologinbutton.Image = null;
             this.backtologinbutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.backtologinbutton.Location = new System.Drawing.Point(182, 357);
+            this.backtologinbutton.Location = new System.Drawing.Point(356, 422);
             this.backtologinbutton.Name = "backtologinbutton";
             this.backtologinbutton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.backtologinbutton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.backtologinbutton.OnHoverForeColor = System.Drawing.Color.White;
             this.backtologinbutton.OnHoverImage = null;
             this.backtologinbutton.OnPressedColor = System.Drawing.Color.Black;
+            this.backtologinbutton.Radius = 10;
             this.backtologinbutton.Size = new System.Drawing.Size(277, 42);
             this.backtologinbutton.TabIndex = 14;
             this.backtologinbutton.Text = "GİRİŞ EKRANINA DÖN";
