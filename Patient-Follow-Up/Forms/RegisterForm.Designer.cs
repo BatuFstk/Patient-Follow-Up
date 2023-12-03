@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Registerbutton = new Guna.UI.WinForms.GunaButton();
@@ -38,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Kayıttckimliktext = new Guna.UI.WinForms.GunaTextBox();
             this.backtologinbutton = new Guna.UI.WinForms.GunaButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,15 +52,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 123);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -189,6 +180,15 @@
             this.backtologinbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.backtologinbutton.Click += new System.EventHandler(this.backtologinbutton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,7 +203,6 @@
             this.Controls.Add(this.Kayıttckimliktext);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";

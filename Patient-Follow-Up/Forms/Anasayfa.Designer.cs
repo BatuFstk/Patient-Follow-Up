@@ -212,6 +212,7 @@
             this.Hastatc.SelectedText = "";
             this.Hastatc.Size = new System.Drawing.Size(358, 35);
             this.Hastatc.TabIndex = 21;
+            this.Hastatc.TextChanged += new System.EventHandler(this.Hastatc_TextChanged);
             // 
             // Hastaisim
             // 
@@ -427,10 +428,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
+            this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
