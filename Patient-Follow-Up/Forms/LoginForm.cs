@@ -14,6 +14,7 @@ namespace Patient_Follow_Up
             InitializeComponent();
         }
 
+
         private void BacktoregisterButton_Click(object sender, EventArgs e)
         {
             Hide();
@@ -35,12 +36,14 @@ namespace Patient_Follow_Up
                 MessageBox.Show("TC Kimlik Numarası 11 haneli olmalıdır.");
                 return;
             }
-
+            
             string username = Tckimliktextbox.Text.Trim();
             string password = Sifretextbox.Text;
 
             var db = FirestoreHelper.Database;
             DocumentReference docRef = db.Collection("UserData").Document(username);
+
+
 
             try
             {
@@ -52,7 +55,7 @@ namespace Patient_Follow_Up
                     {
                         MessageBox.Show("Giriş Başarılı!");
                         Hide();
-                        Anasayfa form = new Anasayfa();
+                        Anasayfa form = new Anasayfa(data);
                         form.ShowDialog();
                         Close();
                     }
@@ -72,6 +75,7 @@ namespace Patient_Follow_Up
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
+
 
         private void Tckimliktextbox_TextChanged(object sender, EventArgs e)
         {

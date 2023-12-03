@@ -49,9 +49,13 @@
             this.CinsiyetCombobox = new Guna.UI.WinForms.GunaComboBox();
             this.Hastadogumdatetime = new Guna.UI.WinForms.GunaDateTimePicker();
             this.hastagiristarihDatetime = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaDateTimePicker3 = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.HastaOnayDateTime = new Guna.UI.WinForms.GunaDateTimePicker();
             this.hastasonuctarihidate = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.BasıncDegerler = new Guna.UI.WinForms.GunaTextBox();
+            this.EkleButton = new Guna.UI.WinForms.GunaButton();
+            this.SilButton = new Guna.UI.WinForms.GunaButton();
+            this.GüncelleButton = new Guna.UI.WinForms.GunaButton();
+            this.BasıncDegerGetirButton = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +68,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1309, 123);
+            this.panel1.Size = new System.Drawing.Size(1492, 123);
             this.panel1.TabIndex = 2;
+            
             // 
             // pictureBox1
             // 
@@ -80,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(297, 40);
+            this.label1.Location = new System.Drawing.Point(428, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(603, 36);
             this.label1.TabIndex = 0;
@@ -90,7 +95,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(441, 143);
+            this.label4.Location = new System.Drawing.Point(594, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 24);
             this.label4.TabIndex = 9;
@@ -214,7 +219,7 @@
             this.Hastatc.SelectedText = "";
             this.Hastatc.Size = new System.Drawing.Size(358, 35);
             this.Hastatc.TabIndex = 21;
-            this.Hastatc.TextChanged += new System.EventHandler(this.Hastatc_TextChanged);
+            
             // 
             // Hastaisim
             // 
@@ -348,31 +353,31 @@
             this.hastagiristarihDatetime.Text = "3.12.2023";
             this.hastagiristarihDatetime.Value = new System.DateTime(2023, 12, 3, 2, 58, 16, 727);
             // 
-            // gunaDateTimePicker3
+            // HastaOnayDateTime
             // 
-            this.gunaDateTimePicker3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker3.BaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker3.BorderColor = System.Drawing.Color.CadetBlue;
-            this.gunaDateTimePicker3.BorderSize = 3;
-            this.gunaDateTimePicker3.CustomFormat = null;
-            this.gunaDateTimePicker3.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gunaDateTimePicker3.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.gunaDateTimePicker3.Location = new System.Drawing.Point(226, 619);
-            this.gunaDateTimePicker3.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker3.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker3.Name = "gunaDateTimePicker3";
-            this.gunaDateTimePicker3.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker3.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker3.Radius = 10;
-            this.gunaDateTimePicker3.Size = new System.Drawing.Size(358, 40);
-            this.gunaDateTimePicker3.TabIndex = 28;
-            this.gunaDateTimePicker3.Text = "3.12.2023";
-            this.gunaDateTimePicker3.Value = new System.DateTime(2023, 12, 3, 2, 58, 16, 727);
+            this.HastaOnayDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.HastaOnayDateTime.BaseColor = System.Drawing.Color.White;
+            this.HastaOnayDateTime.BorderColor = System.Drawing.Color.CadetBlue;
+            this.HastaOnayDateTime.BorderSize = 3;
+            this.HastaOnayDateTime.CustomFormat = null;
+            this.HastaOnayDateTime.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.HastaOnayDateTime.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.HastaOnayDateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.HastaOnayDateTime.ForeColor = System.Drawing.Color.Black;
+            this.HastaOnayDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.HastaOnayDateTime.Location = new System.Drawing.Point(226, 619);
+            this.HastaOnayDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.HastaOnayDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.HastaOnayDateTime.Name = "HastaOnayDateTime";
+            this.HastaOnayDateTime.OnHoverBaseColor = System.Drawing.Color.White;
+            this.HastaOnayDateTime.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.HastaOnayDateTime.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.HastaOnayDateTime.OnPressedColor = System.Drawing.Color.Black;
+            this.HastaOnayDateTime.Radius = 10;
+            this.HastaOnayDateTime.Size = new System.Drawing.Size(358, 40);
+            this.HastaOnayDateTime.TabIndex = 28;
+            this.HastaOnayDateTime.Text = "3.12.2023";
+            this.HastaOnayDateTime.Value = new System.DateTime(2023, 12, 3, 2, 58, 16, 727);
             // 
             // hastasonuctarihidate
             // 
@@ -400,34 +405,147 @@
             this.hastasonuctarihidate.Text = "3.12.2023";
             this.hastasonuctarihidate.Value = new System.DateTime(2023, 12, 3, 2, 58, 16, 727);
             // 
-            // gunaTextBox1
+            // BasıncDegerler
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.CadetBlue;
-            this.gunaTextBox1.BorderSize = 3;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gunaTextBox1.Location = new System.Drawing.Point(226, 738);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(358, 35);
-            this.gunaTextBox1.TabIndex = 30;
+            this.BasıncDegerler.BackColor = System.Drawing.Color.Transparent;
+            this.BasıncDegerler.BaseColor = System.Drawing.Color.White;
+            this.BasıncDegerler.BorderColor = System.Drawing.Color.CadetBlue;
+            this.BasıncDegerler.BorderSize = 3;
+            this.BasıncDegerler.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.BasıncDegerler.FocusedBaseColor = System.Drawing.Color.White;
+            this.BasıncDegerler.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.BasıncDegerler.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.BasıncDegerler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BasıncDegerler.Location = new System.Drawing.Point(226, 738);
+            this.BasıncDegerler.Name = "BasıncDegerler";
+            this.BasıncDegerler.PasswordChar = '\0';
+            this.BasıncDegerler.Radius = 10;
+            this.BasıncDegerler.SelectedText = "";
+            this.BasıncDegerler.Size = new System.Drawing.Size(358, 35);
+            this.BasıncDegerler.TabIndex = 30;
+            // 
+            // EkleButton
+            // 
+            this.EkleButton.AnimationHoverSpeed = 0.07F;
+            this.EkleButton.AnimationSpeed = 0.03F;
+            this.EkleButton.BackColor = System.Drawing.Color.Transparent;
+            this.EkleButton.BaseColor = System.Drawing.Color.CadetBlue;
+            this.EkleButton.BorderColor = System.Drawing.Color.Black;
+            this.EkleButton.BorderSize = 2;
+            this.EkleButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.EkleButton.FocusedColor = System.Drawing.Color.Empty;
+            this.EkleButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EkleButton.ForeColor = System.Drawing.Color.Black;
+            this.EkleButton.Image = null;
+            this.EkleButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.EkleButton.Location = new System.Drawing.Point(794, 194);
+            this.EkleButton.Name = "EkleButton";
+            this.EkleButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.EkleButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.EkleButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.EkleButton.OnHoverImage = null;
+            this.EkleButton.OnPressedColor = System.Drawing.Color.Black;
+            this.EkleButton.Radius = 10;
+            this.EkleButton.Size = new System.Drawing.Size(160, 42);
+            this.EkleButton.TabIndex = 31;
+            this.EkleButton.Text = "EKLE";
+            this.EkleButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EkleButton.Click += new System.EventHandler(this.EkleButton_Click);
+            // 
+            // SilButton
+            // 
+            this.SilButton.AnimationHoverSpeed = 0.07F;
+            this.SilButton.AnimationSpeed = 0.03F;
+            this.SilButton.BackColor = System.Drawing.Color.Transparent;
+            this.SilButton.BaseColor = System.Drawing.Color.CadetBlue;
+            this.SilButton.BorderColor = System.Drawing.Color.Black;
+            this.SilButton.BorderSize = 2;
+            this.SilButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SilButton.FocusedColor = System.Drawing.Color.Empty;
+            this.SilButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SilButton.ForeColor = System.Drawing.Color.Black;
+            this.SilButton.Image = null;
+            this.SilButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.SilButton.Location = new System.Drawing.Point(1046, 194);
+            this.SilButton.Name = "SilButton";
+            this.SilButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.SilButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.SilButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.SilButton.OnHoverImage = null;
+            this.SilButton.OnPressedColor = System.Drawing.Color.Black;
+            this.SilButton.Radius = 10;
+            this.SilButton.Size = new System.Drawing.Size(160, 42);
+            this.SilButton.TabIndex = 32;
+            this.SilButton.Text = "SİL";
+            this.SilButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // GüncelleButton
+            // 
+            this.GüncelleButton.AnimationHoverSpeed = 0.07F;
+            this.GüncelleButton.AnimationSpeed = 0.03F;
+            this.GüncelleButton.BackColor = System.Drawing.Color.Transparent;
+            this.GüncelleButton.BaseColor = System.Drawing.Color.CadetBlue;
+            this.GüncelleButton.BorderColor = System.Drawing.Color.Black;
+            this.GüncelleButton.BorderSize = 2;
+            this.GüncelleButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.GüncelleButton.FocusedColor = System.Drawing.Color.Empty;
+            this.GüncelleButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GüncelleButton.ForeColor = System.Drawing.Color.Black;
+            this.GüncelleButton.Image = null;
+            this.GüncelleButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.GüncelleButton.Location = new System.Drawing.Point(1282, 194);
+            this.GüncelleButton.Name = "GüncelleButton";
+            this.GüncelleButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.GüncelleButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.GüncelleButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.GüncelleButton.OnHoverImage = null;
+            this.GüncelleButton.OnPressedColor = System.Drawing.Color.Black;
+            this.GüncelleButton.Radius = 10;
+            this.GüncelleButton.Size = new System.Drawing.Size(160, 42);
+            this.GüncelleButton.TabIndex = 33;
+            this.GüncelleButton.Text = "GÜNCELLE";
+            this.GüncelleButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // BasıncDegerGetirButton
+            // 
+            this.BasıncDegerGetirButton.AnimationHoverSpeed = 0.07F;
+            this.BasıncDegerGetirButton.AnimationSpeed = 0.03F;
+            this.BasıncDegerGetirButton.BackColor = System.Drawing.Color.Transparent;
+            this.BasıncDegerGetirButton.BaseColor = System.Drawing.Color.CadetBlue;
+            this.BasıncDegerGetirButton.BorderColor = System.Drawing.Color.Black;
+            this.BasıncDegerGetirButton.BorderSize = 2;
+            this.BasıncDegerGetirButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BasıncDegerGetirButton.FocusedColor = System.Drawing.Color.Empty;
+            this.BasıncDegerGetirButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BasıncDegerGetirButton.ForeColor = System.Drawing.Color.Black;
+            this.BasıncDegerGetirButton.Image = null;
+            this.BasıncDegerGetirButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.BasıncDegerGetirButton.Location = new System.Drawing.Point(246, 825);
+            this.BasıncDegerGetirButton.Name = "BasıncDegerGetirButton";
+            this.BasıncDegerGetirButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.BasıncDegerGetirButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BasıncDegerGetirButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.BasıncDegerGetirButton.OnHoverImage = null;
+            this.BasıncDegerGetirButton.OnPressedColor = System.Drawing.Color.Black;
+            this.BasıncDegerGetirButton.Radius = 10;
+            this.BasıncDegerGetirButton.Size = new System.Drawing.Size(312, 42);
+            this.BasıncDegerGetirButton.TabIndex = 34;
+            this.BasıncDegerGetirButton.Text = "BASINÇ DEĞERLERİNİ GETİR";
+            this.BasıncDegerGetirButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1309, 846);
-            this.Controls.Add(this.gunaTextBox1);
+            this.ClientSize = new System.Drawing.Size(1492, 968);
+            this.Controls.Add(this.BasıncDegerGetirButton);
+            this.Controls.Add(this.GüncelleButton);
+            this.Controls.Add(this.SilButton);
+            this.Controls.Add(this.EkleButton);
+            this.Controls.Add(this.BasıncDegerler);
             this.Controls.Add(this.hastasonuctarihidate);
-            this.Controls.Add(this.gunaDateTimePicker3);
+            this.Controls.Add(this.HastaOnayDateTime);
             this.Controls.Add(this.hastagiristarihDatetime);
             this.Controls.Add(this.Hastadogumdatetime);
             this.Controls.Add(this.CinsiyetCombobox);
@@ -450,7 +568,7 @@
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
-            this.Load += new System.EventHandler(this.Anasayfa_Load);
+            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -482,8 +600,12 @@
         private Guna.UI.WinForms.GunaComboBox CinsiyetCombobox;
         private Guna.UI.WinForms.GunaDateTimePicker Hastadogumdatetime;
         private Guna.UI.WinForms.GunaDateTimePicker hastagiristarihDatetime;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker3;
+        private Guna.UI.WinForms.GunaDateTimePicker HastaOnayDateTime;
         private Guna.UI.WinForms.GunaDateTimePicker hastasonuctarihidate;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox BasıncDegerler;
+        private Guna.UI.WinForms.GunaButton EkleButton;
+        private Guna.UI.WinForms.GunaButton SilButton;
+        private Guna.UI.WinForms.GunaButton GüncelleButton;
+        private Guna.UI.WinForms.GunaButton BasıncDegerGetirButton;
     }
 }

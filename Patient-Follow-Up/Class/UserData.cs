@@ -10,7 +10,7 @@ namespace Patient_Follow_Up.Class
 {
 
     [FirestoreData]
-    internal class UserData
+    public  class UserData
     {
         [FirestoreProperty]
         public string Username { get; set; }
