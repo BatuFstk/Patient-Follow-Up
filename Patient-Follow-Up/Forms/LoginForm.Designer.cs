@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Tckimliktextbox = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.LoginButton = new Guna.UI.WinForms.GunaButton();
             this.BacktoregisterButton = new Guna.UI.WinForms.GunaButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,15 @@
             this.panel1.Size = new System.Drawing.Size(949, 125);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 125);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -62,7 +71,6 @@
             this.label1.Size = new System.Drawing.Size(603, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "HASTA BASINÇ TAKİP OTOMASYONU";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Tckimliktextbox
             // 
@@ -80,6 +88,7 @@
             this.Tckimliktextbox.SelectedText = "";
             this.Tckimliktextbox.Size = new System.Drawing.Size(358, 47);
             this.Tckimliktextbox.TabIndex = 1;
+            this.Tckimliktextbox.TextChanged += new System.EventHandler(this.Tckimliktextbox_TextChanged);
             // 
             // label2
             // 
@@ -180,15 +189,6 @@
             this.label4.Size = new System.Drawing.Size(162, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "GİRİŞ EKRANI";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 125);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 

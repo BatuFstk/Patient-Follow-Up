@@ -153,6 +153,7 @@
             this.Kayıttckimliktext.SelectedText = "";
             this.Kayıttckimliktext.Size = new System.Drawing.Size(358, 47);
             this.Kayıttckimliktext.TabIndex = 9;
+            this.Kayıttckimliktext.TextChanged += new System.EventHandler(this.Kayıttckimliktext_TextChanged);
             // 
             // backtologinbutton
             // 

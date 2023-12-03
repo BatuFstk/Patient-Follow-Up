@@ -1,15 +1,8 @@
 ﻿using Google.Cloud.Firestore;
-using Google.Type;
 using Patient_Follow_Up.Class;
 using Patient_Follow_Up.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Patient_Follow_Up
@@ -21,54 +14,82 @@ namespace Patient_Follow_Up
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BacktoregisterButton_Click(object sender, EventArgs e)
         {
             Hide();
             RegisterForm form = new RegisterForm();
             form.ShowDialog();
             Close();
-
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            // Kullanıcı adı ve şifre boş olup olmadığını kontrol et
+            if (string.IsNullOrEmpty(Tckimliktextbox.Text) || string.IsNullOrEmpty(Sifretextbox.Text))
+            {
+                MessageBox.Show("Kullanıcı adı ve şifre alanlarını doldurun!");
+                return;
+            }
+            if (Tckimliktextbox.Text.Length != 11)
+            {
+                MessageBox.Show("TC Kimlik Numarası 11 haneli olmalıdır.");
+                return;
+            }
+
             string username = Tckimliktextbox.Text.Trim();
             string password = Sifretextbox.Text;
 
             var db = FirestoreHelper.Database;
             DocumentReference docRef = db.Collection("UserData").Document(username);
-            UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
 
-            if(data != null)
+            try
             {
-                if(password == Security.Decrypt(data.Password))
+                UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+
+                if (data != null)
                 {
-
-                    MessageBox.Show("Giriş Başarılı!");
-                    Hide();
-                    Anasayfa form = new Anasayfa();
-                    form.ShowDialog();
-                    Close();
-
+                    if (password == Security.Decrypt(data.Password))
+                    {
+                        MessageBox.Show("Giriş Başarılı!");
+                        Hide();
+                        Anasayfa form = new Anasayfa();
+                        form.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kullanıcı Adını veya Şifreyi Girdiniz!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Yanlış Şifre Girdiniz!");
-
+                    MessageBox.Show("Kullanıcı Adını veya Şifreyi Yanlış Girdiniz!");
                 }
-
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Kullanıcı Adını Yanlış Girdiniz!");
+                // Hata durumunda uyarı ver
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+        }
 
+        private void Tckimliktextbox_TextChanged(object sender, EventArgs e)
+        {
+            // Eğer metin kutusu boşsa, işlemi sonlandır
+            if (string.IsNullOrEmpty(Tckimliktextbox.Text))
+            {
+                return;
             }
 
+            // Metin kutusundan sadece sayısal karakterleri al
+            string numericText = new string(Tckimliktextbox.Text.Where(char.IsDigit).ToArray());
+
+            // Eğer sayısal karakterler içermeyen bir karakter varsa, metni güncelle
+            if (Tckimliktextbox.Text != numericText)
+            {
+                Tckimliktextbox.Text = numericText;
+                Tckimliktextbox.SelectionStart = numericText.Length;
+            }
         }
     }
 }
