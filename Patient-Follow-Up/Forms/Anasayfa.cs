@@ -37,6 +37,8 @@ namespace Patient_Follow_Up.Forms
 
             // DataGridView'in verileri güncelle
             UpdateDataGridView();
+
+            WelcomeLabel.Text = "Hoşgeldiniz , " + loggedInUser.Username;
         }
 
         private async void EkleButton_Click(object sender, EventArgs e)

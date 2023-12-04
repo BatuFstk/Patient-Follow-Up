@@ -57,6 +57,7 @@
             this.GüncelleButton = new Guna.UI.WinForms.GunaButton();
             this.BasıncDegerGetirButton = new Guna.UI.WinForms.GunaButton();
             this.HastalariGoruntule = new System.Windows.Forms.DataGridView();
+            this.WelcomeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HastalariGoruntule)).BeginInit();
@@ -70,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1492, 123);
+            this.panel1.Size = new System.Drawing.Size(1543, 123);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
@@ -86,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(428, 42);
+            this.label1.Location = new System.Drawing.Point(495, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(603, 36);
             this.label1.TabIndex = 0;
@@ -96,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(594, 139);
+            this.label4.Location = new System.Drawing.Point(690, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 24);
             this.label4.TabIndex = 9;
@@ -520,7 +521,7 @@
             this.BasıncDegerGetirButton.ForeColor = System.Drawing.Color.Black;
             this.BasıncDegerGetirButton.Image = null;
             this.BasıncDegerGetirButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.BasıncDegerGetirButton.Location = new System.Drawing.Point(246, 825);
+            this.BasıncDegerGetirButton.Location = new System.Drawing.Point(242, 795);
             this.BasıncDegerGetirButton.Name = "BasıncDegerGetirButton";
             this.BasıncDegerGetirButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.BasıncDegerGetirButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -544,12 +545,24 @@
             this.HastalariGoruntule.Size = new System.Drawing.Size(805, 530);
             this.HastalariGoruntule.TabIndex = 35;
             // 
+            // WelcomeLabel
+            // 
+            this.WelcomeLabel.AutoSize = true;
+            this.WelcomeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.WelcomeLabel.ForeColor = System.Drawing.Color.CadetBlue;
+            this.WelcomeLabel.Location = new System.Drawing.Point(18, 140);
+            this.WelcomeLabel.Name = "WelcomeLabel";
+            this.WelcomeLabel.Size = new System.Drawing.Size(81, 23);
+            this.WelcomeLabel.TabIndex = 36;
+            this.WelcomeLabel.Text = "label13";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1492, 968);
+            this.ClientSize = new System.Drawing.Size(1543, 1009);
+            this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.HastalariGoruntule);
             this.Controls.Add(this.BasıncDegerGetirButton);
             this.Controls.Add(this.GüncelleButton);
@@ -620,5 +633,6 @@
         private Guna.UI.WinForms.GunaButton GüncelleButton;
         private Guna.UI.WinForms.GunaButton BasıncDegerGetirButton;
         private System.Windows.Forms.DataGridView HastalariGoruntule;
+        private System.Windows.Forms.Label WelcomeLabel;
     }
 }
