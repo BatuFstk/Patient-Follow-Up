@@ -25,7 +25,7 @@ namespace Patient_Follow_Up.Forms
         {
             var db = FirestoreHelper.Database;
 
-            // Kullanıcı adı ve şifre boş olup olmadığını kontrol et
+            
             if (string.IsNullOrEmpty(Kayıttckimliktext.Text) || string.IsNullOrEmpty(Kayıtsifretext.Text) || string.IsNullOrEmpty(DoktorAdi.Text) || string.IsNullOrEmpty(DoktorSoyadi.Text))
             {
                 MessageBox.Show("Tc Kimlik No , Adınız , Soyadınız ve Şifre Bölümünü Eksiksiz doldurunuz!");
@@ -88,7 +88,7 @@ namespace Patient_Follow_Up.Forms
             }
             catch (Exception ex)
             {
-                // Hata durumunda uyarı ver ve false döndür
+                
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
                 return false;
             }
@@ -96,16 +96,16 @@ namespace Patient_Follow_Up.Forms
 
         private void Kayıttckimliktext_TextChanged(object sender, EventArgs e)
         {
-            // Eğer metin kutusu boşsa, işlemi sonlandır
+            
             if (string.IsNullOrEmpty(Kayıttckimliktext.Text))
             {
                 return;
             }
 
-            // Metin kutusundan sadece sayısal karakterleri al
+            
             string numericText = new string(Kayıttckimliktext.Text.Where(char.IsDigit).ToArray());
 
-            // Eğer sayısal karakterler içermeyen bir karakter varsa, metni güncelle
+           
             if (Kayıttckimliktext.Text != numericText)
             {
                 Kayıttckimliktext.Text = numericText;

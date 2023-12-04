@@ -14,7 +14,7 @@ namespace Patient_Follow_Up
             InitializeComponent();
         }
 
-        // şifremi unuttum
+        
         private void BacktoregisterButton_Click(object sender, EventArgs e)
         {
             Hide();
@@ -25,10 +25,10 @@ namespace Patient_Follow_Up
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            // Kullanıcı adı ve şifre boş olup olmadığını kontrol et
+            
             if (string.IsNullOrEmpty(Tckimliktextbox.Text) || string.IsNullOrEmpty(Sifretextbox.Text))
             {
-                MessageBox.Show("Kullanıcı adı ve şifre alanlarını doldurun!");
+                MessageBox.Show("Tc Kimlik no ve şifre alanlarını doldurun!");
                 return;
             }
             if (Tckimliktextbox.Text.Length != 11)
@@ -71,7 +71,7 @@ namespace Patient_Follow_Up
             }
             catch (Exception ex)
             {
-                // Hata durumunda uyarı ver
+                
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
@@ -79,16 +79,16 @@ namespace Patient_Follow_Up
 
         private void Tckimliktextbox_TextChanged(object sender, EventArgs e)
         {
-            // Eğer metin kutusu boşsa, işlemi sonlandır
+            
             if (string.IsNullOrEmpty(Tckimliktextbox.Text))
             {
                 return;
             }
 
-            // Metin kutusundan sadece sayısal karakterleri al
+           
             string numericText = new string(Tckimliktextbox.Text.Where(char.IsDigit).ToArray());
 
-            // Eğer sayısal karakterler içermeyen bir karakter varsa, metni güncelle
+            
             if (Tckimliktextbox.Text != numericText)
             {
                 Tckimliktextbox.Text = numericText;
