@@ -479,6 +479,7 @@
             this.SilButton.TabIndex = 32;
             this.SilButton.Text = "SİL";
             this.SilButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SilButton.Click += new System.EventHandler(this.SilButton_Click);
             // 
             // GüncelleButton
             // 

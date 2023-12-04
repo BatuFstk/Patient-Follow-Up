@@ -64,7 +64,7 @@ namespace Patient_Follow_Up.Forms
             // Firestore'da doktorun altında "Patients" koleksiyonuna hasta eklemek için referans oluştur
             DocumentReference patientRef = FirestoreHelper.Database
                 .Collection("UserData").Document(loggedInUser.Username)
-                .Collection("Patients").Document();
+                .Collection("Patients").Document(patientData.Tc);
 
             try
             {
@@ -99,6 +99,43 @@ namespace Patient_Follow_Up.Forms
             {
                 var patientData = patientDocument.ConvertTo<PatientData>();
                 HastalariGoruntule.Rows.Add(patientData.Tc, patientData.Name, patientData.Surname, patientData.Birth, patientData.Gender, patientData.Barcode, patientData.EntryDate, patientData.AcceptDate, patientData.ResultDate);
+            }
+        }
+
+        private async void SilButton_Click(object sender, EventArgs e)
+        {
+            // DataGridView'de herhangi bir satır seçili mi kontrol et
+            if (HastalariGoruntule.SelectedRows.Count > 0)
+            {
+                // Seçilen satırın indeksini al
+                int selectedRowIndex = HastalariGoruntule.SelectedRows[0].Index;
+
+                // Seçilen satırın TC'sini al
+                string tcToDelete = Convert.ToString(HastalariGoruntule.Rows[selectedRowIndex].Cells["Tc"].Value);
+
+                // Firestore'dan silinecek belgeyi belirle
+                DocumentReference docRefToDelete = FirestoreHelper.Database
+                    .Collection("UserData").Document(loggedInUser.Username)
+                    .Collection("Patients").Document(tcToDelete);
+
+                try
+                {
+                    // Firestore'dan belgeyi sil
+                    await docRefToDelete.DeleteAsync();
+
+                    // Hasta silindikten sonra DataGridView'i güncelle
+                    UpdateDataGridView();
+
+                    MessageBox.Show("Hasta verisi silindi.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz hastayı seçin.");
             }
         }
     }
