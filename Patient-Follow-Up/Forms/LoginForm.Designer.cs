@@ -82,7 +82,7 @@
             this.Tckimliktextbox.FocusedBaseColor = System.Drawing.Color.White;
             this.Tckimliktextbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Tckimliktextbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.Tckimliktextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Tckimliktextbox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Tckimliktextbox.Location = new System.Drawing.Point(338, 227);
             this.Tckimliktextbox.Name = "Tckimliktextbox";
             this.Tckimliktextbox.PasswordChar = '\0';
@@ -122,7 +122,7 @@
             this.Sifretextbox.FocusedBaseColor = System.Drawing.Color.White;
             this.Sifretextbox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Sifretextbox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.Sifretextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Sifretextbox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Sifretextbox.Location = new System.Drawing.Point(338, 292);
             this.Sifretextbox.Name = "Sifretextbox";
             this.Sifretextbox.PasswordChar = '●';

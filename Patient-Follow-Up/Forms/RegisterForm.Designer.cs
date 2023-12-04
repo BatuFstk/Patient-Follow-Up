@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Registerbutton = new Guna.UI.WinForms.GunaButton();
@@ -37,7 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Kayıttckimliktext = new Guna.UI.WinForms.GunaTextBox();
             this.backtologinbutton = new Guna.UI.WinForms.GunaButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DoktorAdi = new Guna.UI.WinForms.GunaTextBox();
+            this.DoktorSoyadi = new Guna.UI.WinForms.GunaTextBox();
+            this.Adi = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +54,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 123);
+            this.panel1.Size = new System.Drawing.Size(1039, 123);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -87,7 +100,7 @@
             this.Registerbutton.ForeColor = System.Drawing.Color.Black;
             this.Registerbutton.Image = null;
             this.Registerbutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.Registerbutton.Location = new System.Drawing.Point(419, 349);
+            this.Registerbutton.Location = new System.Drawing.Point(418, 497);
             this.Registerbutton.Name = "Registerbutton";
             this.Registerbutton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Registerbutton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -111,8 +124,8 @@
             this.Kayıtsifretext.FocusedBaseColor = System.Drawing.Color.White;
             this.Kayıtsifretext.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Kayıtsifretext.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.Kayıtsifretext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Kayıtsifretext.Location = new System.Drawing.Point(312, 268);
+            this.Kayıtsifretext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Kayıtsifretext.Location = new System.Drawing.Point(312, 421);
             this.Kayıtsifretext.Name = "Kayıtsifretext";
             this.Kayıtsifretext.PasswordChar = '●';
             this.Kayıtsifretext.Radius = 10;
@@ -125,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(236, 279);
+            this.label3.Location = new System.Drawing.Point(226, 434);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 23);
             this.label3.TabIndex = 11;
@@ -135,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(147, 215);
+            this.label2.Location = new System.Drawing.Point(147, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 23);
             this.label2.TabIndex = 10;
@@ -151,7 +164,7 @@
             this.Kayıttckimliktext.FocusedBaseColor = System.Drawing.Color.White;
             this.Kayıttckimliktext.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Kayıttckimliktext.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.Kayıttckimliktext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Kayıttckimliktext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Kayıttckimliktext.Location = new System.Drawing.Point(312, 203);
             this.Kayıttckimliktext.Name = "Kayıttckimliktext";
             this.Kayıttckimliktext.PasswordChar = '\0';
@@ -175,7 +188,7 @@
             this.backtologinbutton.ForeColor = System.Drawing.Color.Black;
             this.backtologinbutton.Image = null;
             this.backtologinbutton.ImageSize = new System.Drawing.Size(20, 20);
-            this.backtologinbutton.Location = new System.Drawing.Point(356, 422);
+            this.backtologinbutton.Location = new System.Drawing.Point(361, 567);
             this.backtologinbutton.Name = "backtologinbutton";
             this.backtologinbutton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.backtologinbutton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -189,21 +202,74 @@
             this.backtologinbutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.backtologinbutton.Click += new System.EventHandler(this.backtologinbutton_Click);
             // 
-            // pictureBox1
+            // DoktorAdi
             // 
-            this.pictureBox1.Image = global::Patient_Follow_Up.Properties.Resources.Adsız;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 123);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.DoktorAdi.BackColor = System.Drawing.Color.Transparent;
+            this.DoktorAdi.BaseColor = System.Drawing.Color.White;
+            this.DoktorAdi.BorderColor = System.Drawing.Color.CadetBlue;
+            this.DoktorAdi.BorderSize = 3;
+            this.DoktorAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DoktorAdi.FocusedBaseColor = System.Drawing.Color.White;
+            this.DoktorAdi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DoktorAdi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.DoktorAdi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DoktorAdi.Location = new System.Drawing.Point(312, 272);
+            this.DoktorAdi.Name = "DoktorAdi";
+            this.DoktorAdi.PasswordChar = '\0';
+            this.DoktorAdi.Radius = 10;
+            this.DoktorAdi.SelectedText = "";
+            this.DoktorAdi.Size = new System.Drawing.Size(358, 47);
+            this.DoktorAdi.TabIndex = 15;
+            // 
+            // DoktorSoyadi
+            // 
+            this.DoktorSoyadi.BackColor = System.Drawing.Color.Transparent;
+            this.DoktorSoyadi.BaseColor = System.Drawing.Color.White;
+            this.DoktorSoyadi.BorderColor = System.Drawing.Color.CadetBlue;
+            this.DoktorSoyadi.BorderSize = 3;
+            this.DoktorSoyadi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DoktorSoyadi.FocusedBaseColor = System.Drawing.Color.White;
+            this.DoktorSoyadi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DoktorSoyadi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.DoktorSoyadi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DoktorSoyadi.Location = new System.Drawing.Point(312, 344);
+            this.DoktorSoyadi.Name = "DoktorSoyadi";
+            this.DoktorSoyadi.PasswordChar = '\0';
+            this.DoktorSoyadi.Radius = 10;
+            this.DoktorSoyadi.SelectedText = "";
+            this.DoktorSoyadi.Size = new System.Drawing.Size(358, 47);
+            this.DoktorSoyadi.TabIndex = 16;
+            // 
+            // Adi
+            // 
+            this.Adi.AutoSize = true;
+            this.Adi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Adi.Location = new System.Drawing.Point(212, 281);
+            this.Adi.Name = "Adi";
+            this.Adi.Size = new System.Drawing.Size(94, 23);
+            this.Adi.TabIndex = 17;
+            this.Adi.Text = "ADINIZ : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(173, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 23);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "SOYADINIZ : ";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(922, 577);
+            this.ClientSize = new System.Drawing.Size(1039, 643);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Adi);
+            this.Controls.Add(this.DoktorSoyadi);
+            this.Controls.Add(this.DoktorAdi);
             this.Controls.Add(this.backtologinbutton);
             this.Controls.Add(this.Registerbutton);
             this.Controls.Add(this.Kayıtsifretext);
@@ -235,5 +301,9 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaTextBox Kayıttckimliktext;
         private Guna.UI.WinForms.GunaButton backtologinbutton;
+        private Guna.UI.WinForms.GunaTextBox DoktorAdi;
+        private Guna.UI.WinForms.GunaTextBox DoktorSoyadi;
+        private System.Windows.Forms.Label Adi;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -16,6 +16,10 @@ namespace Patient_Follow_Up.Class
         public string Username { get; set; }
         [FirestoreProperty]
         public string Password { get; set; }
+        [FirestoreProperty]
+        public string DoktorName { get; set; }
+        [FirestoreProperty]
+        public string DoktorSurname { get; set; }
 
         
 

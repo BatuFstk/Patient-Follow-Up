@@ -26,9 +26,9 @@ namespace Patient_Follow_Up.Forms
             var db = FirestoreHelper.Database;
 
             // Kullanıcı adı ve şifre boş olup olmadığını kontrol et
-            if (string.IsNullOrEmpty(Kayıttckimliktext.Text) || string.IsNullOrEmpty(Kayıtsifretext.Text))
+            if (string.IsNullOrEmpty(Kayıttckimliktext.Text) || string.IsNullOrEmpty(Kayıtsifretext.Text) || string.IsNullOrEmpty(DoktorAdi.Text) || string.IsNullOrEmpty(DoktorSoyadi.Text))
             {
-                MessageBox.Show("Kullanıcı adı ve şifre alanlarını doldurun!");
+                MessageBox.Show("Tc Kimlik No , Adınız , Soyadınız ve Şifre Bölümünü Eksiksiz doldurunuz!");
                 return;
             }
             if (Kayıttckimliktext.Text.Length != 11)
@@ -53,11 +53,16 @@ namespace Patient_Follow_Up.Forms
         {
             string username = Kayıttckimliktext.Text.Trim();
             string password = Security.Encrypt(Kayıtsifretext.Text);
+            string docadi = DoktorAdi.Text.Trim();
+            string docsoyadi = DoktorSoyadi.Text.Trim();
 
             return new UserData()
             {
                 Username = username,
-                Password = password
+                Password = password,
+                DoktorName = docadi,
+                DoktorSurname = docsoyadi
+
             };
         }
 
