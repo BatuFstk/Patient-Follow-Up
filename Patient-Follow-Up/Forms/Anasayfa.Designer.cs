@@ -54,10 +54,10 @@
             this.BasıncDegerler = new Guna.UI.WinForms.GunaTextBox();
             this.EkleButton = new Guna.UI.WinForms.GunaButton();
             this.SilButton = new Guna.UI.WinForms.GunaButton();
-            this.GüncelleButton = new Guna.UI.WinForms.GunaButton();
+            this.AllDeleteButton = new Guna.UI.WinForms.GunaButton();
             this.BasıncDegerGetirButton = new Guna.UI.WinForms.GunaButton();
-            this.HastalariGoruntule = new System.Windows.Forms.DataGridView();
             this.WelcomeLabel = new System.Windows.Forms.Label();
+            this.HastalariGoruntule = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HastalariGoruntule)).BeginInit();
@@ -481,32 +481,33 @@
             this.SilButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SilButton.Click += new System.EventHandler(this.SilButton_Click);
             // 
-            // GüncelleButton
+            // AllDeleteButton
             // 
-            this.GüncelleButton.AnimationHoverSpeed = 0.07F;
-            this.GüncelleButton.AnimationSpeed = 0.03F;
-            this.GüncelleButton.BackColor = System.Drawing.Color.Transparent;
-            this.GüncelleButton.BaseColor = System.Drawing.Color.CadetBlue;
-            this.GüncelleButton.BorderColor = System.Drawing.Color.Black;
-            this.GüncelleButton.BorderSize = 2;
-            this.GüncelleButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.GüncelleButton.FocusedColor = System.Drawing.Color.Empty;
-            this.GüncelleButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.GüncelleButton.ForeColor = System.Drawing.Color.Black;
-            this.GüncelleButton.Image = null;
-            this.GüncelleButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.GüncelleButton.Location = new System.Drawing.Point(1282, 194);
-            this.GüncelleButton.Name = "GüncelleButton";
-            this.GüncelleButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.GüncelleButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.GüncelleButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.GüncelleButton.OnHoverImage = null;
-            this.GüncelleButton.OnPressedColor = System.Drawing.Color.Black;
-            this.GüncelleButton.Radius = 10;
-            this.GüncelleButton.Size = new System.Drawing.Size(160, 42);
-            this.GüncelleButton.TabIndex = 33;
-            this.GüncelleButton.Text = "GÜNCELLE";
-            this.GüncelleButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AllDeleteButton.AnimationHoverSpeed = 0.07F;
+            this.AllDeleteButton.AnimationSpeed = 0.03F;
+            this.AllDeleteButton.BackColor = System.Drawing.Color.Transparent;
+            this.AllDeleteButton.BaseColor = System.Drawing.Color.CadetBlue;
+            this.AllDeleteButton.BorderColor = System.Drawing.Color.Black;
+            this.AllDeleteButton.BorderSize = 2;
+            this.AllDeleteButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AllDeleteButton.FocusedColor = System.Drawing.Color.Empty;
+            this.AllDeleteButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.AllDeleteButton.ForeColor = System.Drawing.Color.Black;
+            this.AllDeleteButton.Image = null;
+            this.AllDeleteButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.AllDeleteButton.Location = new System.Drawing.Point(1282, 194);
+            this.AllDeleteButton.Name = "AllDeleteButton";
+            this.AllDeleteButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.AllDeleteButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.AllDeleteButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.AllDeleteButton.OnHoverImage = null;
+            this.AllDeleteButton.OnPressedColor = System.Drawing.Color.Black;
+            this.AllDeleteButton.Radius = 10;
+            this.AllDeleteButton.Size = new System.Drawing.Size(160, 42);
+            this.AllDeleteButton.TabIndex = 33;
+            this.AllDeleteButton.Text = "TÜMÜNÜ SİL";
+            this.AllDeleteButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AllDeleteButton.Click += new System.EventHandler(this.AllDeleteButton_Click);
             // 
             // BasıncDegerGetirButton
             // 
@@ -535,17 +536,6 @@
             this.BasıncDegerGetirButton.Text = "BASINÇ DEĞERLERİNİ GETİR";
             this.BasıncDegerGetirButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // HastalariGoruntule
-            // 
-            this.HastalariGoruntule.BackgroundColor = System.Drawing.Color.CadetBlue;
-            this.HastalariGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HastalariGoruntule.Location = new System.Drawing.Point(675, 272);
-            this.HastalariGoruntule.Name = "HastalariGoruntule";
-            this.HastalariGoruntule.RowHeadersWidth = 51;
-            this.HastalariGoruntule.RowTemplate.Height = 24;
-            this.HastalariGoruntule.Size = new System.Drawing.Size(805, 530);
-            this.HastalariGoruntule.TabIndex = 35;
-            // 
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
@@ -557,6 +547,17 @@
             this.WelcomeLabel.TabIndex = 36;
             this.WelcomeLabel.Text = "label13";
             // 
+            // HastalariGoruntule
+            // 
+            this.HastalariGoruntule.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.HastalariGoruntule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HastalariGoruntule.Location = new System.Drawing.Point(675, 272);
+            this.HastalariGoruntule.Name = "HastalariGoruntule";
+            this.HastalariGoruntule.RowHeadersWidth = 51;
+            this.HastalariGoruntule.RowTemplate.Height = 24;
+            this.HastalariGoruntule.Size = new System.Drawing.Size(805, 530);
+            this.HastalariGoruntule.TabIndex = 35;
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -566,7 +567,7 @@
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.HastalariGoruntule);
             this.Controls.Add(this.BasıncDegerGetirButton);
-            this.Controls.Add(this.GüncelleButton);
+            this.Controls.Add(this.AllDeleteButton);
             this.Controls.Add(this.SilButton);
             this.Controls.Add(this.EkleButton);
             this.Controls.Add(this.BasıncDegerler);
@@ -631,9 +632,9 @@
         private Guna.UI.WinForms.GunaTextBox BasıncDegerler;
         private Guna.UI.WinForms.GunaButton EkleButton;
         private Guna.UI.WinForms.GunaButton SilButton;
-        private Guna.UI.WinForms.GunaButton GüncelleButton;
+        private Guna.UI.WinForms.GunaButton AllDeleteButton;
         private Guna.UI.WinForms.GunaButton BasıncDegerGetirButton;
-        private System.Windows.Forms.DataGridView HastalariGoruntule;
         private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.DataGridView HastalariGoruntule;
     }
 }

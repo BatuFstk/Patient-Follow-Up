@@ -43,6 +43,16 @@ namespace Patient_Follow_Up.Forms
 
         private async void EkleButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Hastatc.Text) || string.IsNullOrEmpty(Hastaisim.Text) || string.IsNullOrEmpty(Hastasoyisim.Text) || CinsiyetCombobox.SelectedIndex == -1 || string.IsNullOrEmpty(Hastabarkodno.Text))
+            {
+                MessageBox.Show("TC Kimlik No, İsim, Soyisim, Cinsiyet ve Barkod alanları eksiksiz doldurulmalıdır!", "Eksik Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Eğer gerekli alanlar eksikse işlemi sonlandır
+            }
+            if (Hastatc.Text.Length != 11)
+            {
+                MessageBox.Show("TC kimlik numarası 11 haneli olmalıdır.", "Geçersiz TC Kimlik No!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Eğer TC kimlik numarası geçerli değilse işlemi sonlandır
+            }
             // Hasta bilgilerini oluştur
             var patientData = new PatientData
             {
@@ -136,6 +146,50 @@ namespace Patient_Follow_Up.Forms
             else
             {
                 MessageBox.Show("Lütfen silmek istediğiniz hastayı seçin.");
+            }
+        }
+
+        private async void AllDeleteButton_Click(object sender, EventArgs e)
+        {
+            // Kullanıcıya silme işlemi için onay iste
+            DialogResult result = MessageBox.Show("Tüm hasta verilerini silmek istediğinize emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Kullanıcı evet derse silme işlemine devam et
+            if (result == DialogResult.Yes)
+            {
+                // Firestore'dan doktorun altındaki "Patients" koleksiyonunu referans al
+                CollectionReference patientsCollection = FirestoreHelper.Database
+                    .Collection("UserData").Document(loggedInUser.Username)
+                    .Collection("Patients");
+
+                try
+                {
+                    // Firestore'daki tüm belgeleri al
+                    var patientsQuery = await patientsCollection.GetSnapshotAsync();
+
+                    // Belge sayısı 0'dan büyükse silme işlemi başlat
+                    if (patientsQuery.Count > 0)
+                    {
+                        // Tüm belgeleri sil
+                        foreach (var patientDocument in patientsQuery.Documents)
+                        {
+                            await patientDocument.Reference.DeleteAsync();
+                        }
+
+                        // DataGridView'i güncelle
+                        UpdateDataGridView();
+
+                        MessageBox.Show("Tüm hasta verileri silindi.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Silinecek hasta verisi bulunamadı.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
             }
         }
     }
